@@ -1,0 +1,9 @@
+header {
+  display: flex;
+  flex-direction: column;
+  max-width: 300px;
+}
+
+.header-logo img {
+  max-width: 15rem;
+}
