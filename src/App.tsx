@@ -1,13 +1,20 @@
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Agents from "./components/Agents";
 import { Header } from "./components/Header";
+import Home from "./components/Home";
 import "./styles/App.css";
 
 function App() {
   return (
-    <main>
+    <Router>
       <Header />
-      <Agents />
-    </main>
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/agents" element={<Agents />} />
+        </Routes>
+      </main>
+    </Router>
   );
 }
 
