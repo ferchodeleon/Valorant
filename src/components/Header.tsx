@@ -10,13 +10,19 @@ export const Header = () => {
           <img src={Valorant} alt="Icon of Valorant" />
         </Link>
       </div>
-      <ol>
-        <li>
-          <Link to="/agents">Agents</Link>
-        </li>
-        <li>Maps</li>
-        <li>Ranks</li>
-      </ol>
+      <menu className="header-menu">
+        <ol>
+          <li>
+            <Link to="/agents">Agents</Link>
+          </li>
+          <li>
+            <a>Maps</a>
+          </li>
+          <li>
+            <a>Ranks</a>
+          </li>
+        </ol>
+      </menu>
     </header>
   );
 };
