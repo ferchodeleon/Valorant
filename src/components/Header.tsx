@@ -12,14 +12,20 @@ export const Header = () => {
       </div>
       <menu className="header-menu">
         <ol>
-          <li>
-            <Link to="/agents">Agents</Link>
+          <li className="header-menu-a">
+            <Link to="/agents">
+              <span>Agents</span>
+            </Link>
           </li>
           <li>
-            <a>Maps</a>
+            <a className="header-menu-a">
+              <span>Maps</span>
+            </a>
           </li>
           <li>
-            <a>Ranks</a>
+            <a className="header-menu-a">
+              <span>Ranks</span>
+            </a>
           </li>
         </ol>
       </menu>
