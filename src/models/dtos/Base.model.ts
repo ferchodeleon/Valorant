@@ -1,5 +1,5 @@
 export interface BaseModel {
-  id: string;
+  uuid: string;
   displayName: string;
   description?: string;
 }
