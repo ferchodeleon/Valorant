@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import Valorant from "../assets/valorant.png";
+import Valorant from "../assets/Images/logo-valorant.png";
 import "../styles/Header.css";
 
 export const Header = () => {
