@@ -38,7 +38,7 @@ export default function Agents() {
         agents.map((agent) => {
           return (
             <div className="agent-card" key={agent.uuid}>
-              {/* <img src={agent.displayIcon} /> */}
+              <img src={agent.displayIcon} />
               <h3 className="agent-card-title">{agent.displayName}</h3>
               <p className="agent-card-description">{agent.description}</p>
               <div className="agent-role">
