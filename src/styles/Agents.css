@@ -1,8 +1,8 @@
 .agents-container {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 1.5rem;
-  padding: 1rem;
+  padding: 1rem 1rem 0 1rem;
   margin: 0 auto;
 }
 
@@ -10,20 +10,21 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  background-color: #fff;
+  background-color: #262626;
   border-radius: 0.5rem;
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  box-shadow: 10px 10px 30px rgba(210, 210, 210, 0.1);
   align-items: center;
   transition: transform 0.3s;
+  padding: .5rem;
 }
 
 .agent-card:hover {
-  transform: scale(1.1);
+  transform: scale(1.03);
   transition: transform 0.3s;
 }
 
-.agent-card img {
-  width: 90%;
+.agent-card > img {
+  width: 50%;
   height: auto;
   border-radius: 10%;
 }
@@ -36,12 +37,54 @@
   font-family: 'Valorant', sans-serif;
   font-size: 1.7rem;
   text-align: center;
+  color: #fff;
+}
+
+.agent-role {
   color: #000;
 }
 
 .agent-card-description {
   font-size: 1rem;
-  color: #666;
+  color: #fff;
   margin-top: 1rem;
   text-align: center;
+}
+
+.agent-role {
+  text-align: center;
+}
+
+.agent-role-name {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.agent-role-img {
+  width: 20%;
+  height: auto;
+}
+
+.agent-abilities-container {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.agent-abilities-info {
+  text-align: center;
+  margin: 0 .5rem;
+}
+
+.agent-abilities-info:nth-child(n+2) {
+  border-left: 1px solid #fff;
+}
+
+.agent-abilities-info > img {
+  width: 20%;
+  height: auto;
+}
+
+.agent-abilities-slot {
+  font-size: .8rem;
 }

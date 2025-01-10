@@ -1,4 +1,4 @@
-import { AgentModels } from "../models/Agents.model";
+import { AgentModels } from "../models/agents/Agents.model";
 import BaseHttpService from "./base.http.service";
 
 export class AgentHttpService {

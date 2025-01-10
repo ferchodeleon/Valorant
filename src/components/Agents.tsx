@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { AgentModels } from "../models/Agents.model";
+import { AgentModels } from "../models/agents/Agents.model";
 import { AgentHttpService } from "../services/agents.http.service";
 
 import "../styles/Agents.css";
@@ -17,7 +17,6 @@ export default function Agents() {
       setAgents(data);
       setLoading(false);
       console.log("Información", data);
-      // setAgents(data);
     } catch (error) {
       console.error("Error fetching agents:", error);
       setError(`Error fetching agents: ${error}`);
@@ -38,10 +37,28 @@ export default function Agents() {
       ) : (
         agents.map((agent) => {
           return (
-            <div className="agent-card" key={agent.id}>
+            <div className="agent-card" key={agent.uuid}>
               {/* <img src={agent.displayIcon} /> */}
               <h3 className="agent-card-title">{agent.displayName}</h3>
               <p className="agent-card-description">{agent.description}</p>
+              <div className="agent-role">
+                <p className="agent-role-name">{agent.role!.displayName}</p>
+                <img className="agent-role-img" src={agent.role!.displayIcon} />
+              </div>
+              <div className="agent-abilities-container">
+                {agent.abilities.map((ability) => {
+                  return (
+                    <div
+                      className="agent-abilities-info"
+                      key={ability.displayName}
+                    >
+                      <img src={ability.displayIcon} />
+                      <p>{ability.displayName}</p>
+                      <p className="agent-abilities-slot">{ability.slot}</p>
+                    </div>
+                  );
+                })}
+              </div>
             </div>
           );
         })
