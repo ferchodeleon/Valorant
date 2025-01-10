@@ -12,6 +12,11 @@
   font-family: 'Wonderly', sans-serif;
 }
 
+:root {
+  --Valorant-black: #0f1923;
+  --Valorant-red: #ff4654;
+}
+
 .body {
   background-color: #000;
 }
