@@ -1,0 +1,37 @@
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  overflow: hidden;
+}
+
+.home-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+.home-content {
+  position: relative;
+  z-index: 1;
+  color: #fff;
+  text-align: center;
+  top: 30%;
+  transform: translateY(-50%);
+  width: 100%;
+}
+
+.home-title {
+  font-size: 3rem;
+  font-family: 'Valorant', sans-serif;
+  color: #fff;
+}
+
+.home-description {
+  font-size: 1.5rem;
+  color: #fff;
+}
