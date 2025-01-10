@@ -1,8 +1,10 @@
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 import Valorant from "../assets/Images/logo-valorant.png";
 import "../styles/Header.css";
 
 export const Header = () => {
+  const location = useLocation();
+
   return (
     <header>
       <div className="header-logo">
@@ -12,7 +14,11 @@ export const Header = () => {
       </div>
       <menu className="header-menu">
         <ol>
-          <li className="header-menu-a">
+          <li
+            className={`header-menu-a ${
+              location.pathname === "/agents" ? "active" : ""
+            }`}
+          >
             <Link to="/agents">
               <span>Agents</span>
             </Link>

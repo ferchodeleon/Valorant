@@ -40,6 +40,10 @@ header {
   background-color: var(--Valorant-red);
 }
 
+.header-menu-a.active {
+  text-decoration: underline;
+}
+
 .header-menu-a::before {
   content: "";
   display: block;
