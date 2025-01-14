@@ -16,6 +16,7 @@
   align-items: center;
   transition: transform 0.3s;
   padding: .5rem;
+  width: 98%;
 }
 
 .agent-card:hover {
@@ -69,22 +70,5 @@
   display: flex;
   align-items: center;
   margin-top: 1rem;
-}
-
-.agent-abilities-info {
-  text-align: center;
-  margin: 0 .5rem;
-}
-
-.agent-abilities-info:nth-child(n+2) {
-  border-left: 1px solid #fff;
-}
-
-.agent-abilities-info > img {
-  width: 20%;
-  height: auto;
-}
-
-.agent-abilities-slot {
-  font-size: .8rem;
+  width: 100%;
 }
