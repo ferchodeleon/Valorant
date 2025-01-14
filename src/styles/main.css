@@ -8,8 +8,20 @@
   src: url('../assets/fonts/wonderly/Wonderly.otf');
 }
 
+@font-face {
+  font-family: 'kg-corner';
+  font-weight: 100;
+  font-size: large;
+  src: url('../assets/fonts/kg-corner/kg-corner.ttf');
+}
+
+@font-face {
+  font-family: 'comic-neue';
+  src: url('../assets/fonts/comic-neue/comic-neue.ttf');
+}
+
 * {
-  font-family: 'Wonderly', sans-serif;
+  font-family: 'comic-neue', sans-serif;
 }
 
 :root {
