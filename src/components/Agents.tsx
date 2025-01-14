@@ -3,10 +3,11 @@ import { AgentModels } from "../models/agents/Agents.model";
 import { AgentHttpService } from "../services/agents.http.service";
 
 import "../styles/Agents.css";
+import Abilities from "./chunks/abilities";
 
 const getAgents = new AgentHttpService();
 
-export default function Agents() {
+const Agents = () => {
   const [agents, setAgents] = useState<AgentModels[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState("");
@@ -38,7 +39,7 @@ export default function Agents() {
         agents.map((agent) => {
           return (
             <div className="agent-card" key={agent.uuid}>
-              <img src={agent.displayIcon} />
+              {/* <img src={agent.displayIcon} /> */}
               <h3 className="agent-card-title">{agent.displayName}</h3>
               <p className="agent-card-description">{agent.description}</p>
               <div className="agent-role">
@@ -47,16 +48,7 @@ export default function Agents() {
               </div>
               <div className="agent-abilities-container">
                 {agent.abilities.map((ability) => {
-                  return (
-                    <div
-                      className="agent-abilities-info"
-                      key={ability.displayName}
-                    >
-                      <img src={ability.displayIcon} />
-                      <p>{ability.displayName}</p>
-                      <p className="agent-abilities-slot">{ability.slot}</p>
-                    </div>
-                  );
+                  return <Abilities {...ability} />;
                 })}
               </div>
             </div>
@@ -65,4 +57,6 @@ export default function Agents() {
       )}
     </div>
   );
-}
+};
+
+export default Agents;
