@@ -35,6 +35,16 @@ export const Header = () => {
           </li>
         </ol>
       </menu>
+      <div className="flex">
+        <img
+          className="p-2 w-12 h-12"
+          src="https://images.vexels.com/media/users/3/164599/isolated/preview/ce858535b77f22068049aca2457e59ad-spain-flag-language-icon-circle.png"
+        />
+        <img
+          className="p-2 w-12 h-12"
+          src="https://images.vexels.com/media/users/3/163966/isolated/preview/6ecbb5ec8c121c0699c9b9179d6b24aa-england-flag-language-icon-circle.png"
+        />
+      </div>
     </header>
   );
 };
