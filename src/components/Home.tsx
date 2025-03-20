@@ -14,7 +14,7 @@ const Home = () => {
         className="home-video"
       />
       <div className="home-content">
-        <p className="home-title">Bienvenido a Valorant API</p>
+        <p className="home-title">Bienvenido a data Valorant</p>
         <p className="home-description">
           Hola aquí podrás obtener diferentes datos del juego Valorant,
           selecciona la opción deseada arriba ☝️

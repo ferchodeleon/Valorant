@@ -1,3 +1,15 @@
+.agents-section {
+  margin: 2rem;
+}
+
+.agents-search-input {
+  margin-left: 1rem;
+  width: 15%;
+  border-radius: 15px;
+  height: 2rem;
+  padding: .5rem 1rem;
+}
+
 .agents-container {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
