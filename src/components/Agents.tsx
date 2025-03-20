@@ -35,9 +35,9 @@ const Agents = () => {
   });
 
   return (
-    <section className="agents-section">
+    <section className="m-auto agents-section">
       <input
-        className="agents-search-input"
+        className="agents-search-input w-1/4 border-none rounded-lg"
         type="text"
         placeholder="Buscar agente"
         value={searchTerm}
