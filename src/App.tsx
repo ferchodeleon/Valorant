@@ -1,10 +1,13 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Agents from "./components/Agents";
-import { Header } from "./components/Header";
-import Home from "./components/Home";
-import "./styles/App.css";
 import { I18nextProvider } from "react-i18next";
+
+import Home from "./components/Home";
+import { Header } from "./components/Header";
+import Agents from "./components/Agents";
+import AgentDetails from "./components/AgentDetails";
 import i18n from "./translation";
+
+import "./styles/App.css";
 
 function App() {
   return (
@@ -15,6 +18,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/agents" element={<Agents />} />
+            <Route path="/agents/:agentId" element={<AgentDetails />} />
           </Routes>
         </main>
       </Router>
