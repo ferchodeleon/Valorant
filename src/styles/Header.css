@@ -5,6 +5,12 @@ header {
   width: 100%;
   padding: 1rem 2rem;
   position: relative;
+  transition: opacity 0.5s ease;
+}
+
+header.transitioning {
+  opacity: 0.5;
+  pointer-events: none;
 }
 
 .header-logo img {

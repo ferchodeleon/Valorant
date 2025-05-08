@@ -2,7 +2,6 @@ import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 
-// import i18n from "../translation";
 import Valorant from "../assets/Images/logo-valorant.png";
 import "../styles/Header.css";
 
@@ -10,10 +9,16 @@ export const Header = () => {
   const location = useLocation();
   const { t, i18n } = useTranslation();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isTransitioning, setIsTransitioning] = useState(false);
 
-  const handleLanguageChange = (language: string) => {
+  const handleLanguageChange = async (language: string) => {
+    setIsTransitioning(true);
     i18n.changeLanguage(language);
     localStorage.setItem("language", language);
+
+    await new Promise((resolve) => setTimeout(resolve, 100));
+    window.location.reload();
+    setIsTransitioning(false);
   };
 
   useEffect(() => {
@@ -27,7 +32,7 @@ export const Header = () => {
   }, [i18n]);
 
   return (
-    <header>
+    <header className={isTransitioning ? "transitioning" : ""}>
       <div className="header-logo">
         <Link to="/">
           <img src={Valorant} alt="Icon of Valorant" />
@@ -38,11 +43,12 @@ export const Header = () => {
         <button
           className={`${
             i18n.language === "es" ? "border-b-4" : ""
-          } cursor-pointer`}
+          } cursor-pointer transition-all duration-300`}
           onClick={() => handleLanguageChange("es")}
+          disabled={i18n.language === "es" || isTransitioning}
         >
           <img
-            className="p-2 w-10 h-10"
+            className="p-2 w-10 h-10 transition-transform duration-300 hover:scale-110"
             src="https://images.vexels.com/media/users/3/164599/isolated/preview/ce858535b77f22068049aca2457e59ad-spain-flag-language-icon-circle.png"
             alt="Spanish"
           />
@@ -50,11 +56,12 @@ export const Header = () => {
         <button
           className={`${
             i18n.language === "en" ? "border-b-4" : ""
-          } cursor-pointer`}
+          } cursor-pointer transition-all duration-300`}
           onClick={() => handleLanguageChange("en")}
+          disabled={i18n.language === "en" || isTransitioning}
         >
           <img
-            className="p-2 w-10 h-10"
+            className="p-2 w-10 h-10 transition-transform duration-300 hover:scale-110"
             src="https://images.vexels.com/media/users/3/163966/isolated/preview/6ecbb5ec8c121c0699c9b9179d6b24aa-england-flag-language-icon-circle.png"
             alt="English"
           />
