@@ -28,8 +28,9 @@
 :root {
   --Valorant-black: #0f1923;
   --Valorant-red: #ff4654;
+  --Valorant-third: #473535;
 }
 
 .body {
-  background-color: #000;
+  background-color: var(--Valorant-third);
 }

@@ -45,12 +45,12 @@ export const Header = () => {
           </li>
           <li>
             <a className="header-menu-a">
-              <span>Maps</span>
+              <span>{t("maps")}</span>
             </a>
           </li>
           <li>
             <a className="header-menu-a">
-              <span>Ranks</span>
+              <span>{t("ranks")}</span>
             </a>
           </li>
         </ol>

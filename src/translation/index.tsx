@@ -10,6 +10,8 @@ const resources = {
       welcome: "Welcome",
       language: "Language",
       agents: "Agents",
+      maps: "Maps",
+      ranks: "Ranks",
       // Add more translations as needed
     },
   },
@@ -19,6 +21,8 @@ const resources = {
       welcome: "Bienvenido",
       language: "Idioma",
       agents: "Agentes",
+      maps: "Mapas",
+      ranks: "Rangos",
       // Add more translations as needed
     },
   },

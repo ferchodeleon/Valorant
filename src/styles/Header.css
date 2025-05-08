@@ -38,6 +38,9 @@ header {
   cursor: pointer;
   padding: .4rem 2rem;
   background-color: var(--Valorant-red);
+  clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 85%);
+  background: linear-gradient(135deg, #000 15%, var(--Valorant-red) 15%);
+  border-radius: 10px;
 }
 
 .header-menu-a.active {
@@ -63,6 +66,7 @@ header {
 }
 
 .header-menu-a span {
+  font-family: 'Valorant', sans-serif;
   position: relative;
   z-index: 1;
 }
