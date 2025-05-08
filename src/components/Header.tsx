@@ -76,7 +76,7 @@ export const Header = () => {
               <span>{t("agents")}</span>
             </Link>
           </li>
-          <li>
+          <li className={location.pathname === "/maps" ? "active" : ""}>
             <Link to="/maps" onClick={() => setIsMenuOpen(false)}>
               <span>{t("maps")}</span>
             </Link>

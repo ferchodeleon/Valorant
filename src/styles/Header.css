@@ -63,37 +63,39 @@ header {
 }
 
 .nav-menu a {
-  color: #fff;
-  text-decoration: none;
   font-size: 1.5rem;
   font-family: 'Valorant', sans-serif;
   display: block;
   padding: 10px 20px;
   position: relative;
   overflow: hidden;
-  background-color: var(--Valorant-red);
+  color: #fff;
+  text-decoration: none;
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 85%);
-  background: linear-gradient(140deg, #000 10%, var(--Valorant-red) 15%);
   border-radius: 10px;
+  background-color: var(--Valorant-black);
 }
 
-.header-menu-a::before {
+.nav-menu a::before {
   content: "";
-  display: block;
   position: absolute;
   top: 0;
-  left: -10%;
-  width: 130%;
+  left: -100%;
+  width: 100%;
   height: 100%;
-  background-color: var(--Valorant-black);
-  border: 1px solid var(--Valorant-red);
-  transform: translateX(-100%) skew(-15deg);
-  transition: transform .4s ease;
+  background-color: var(--Valorant-red);
+  transition: transform 0.4s ease;
+  z-index: -1;
 }
 
-.header-menu-a:hover:before {
-  transform: translateX(0) skew(-15deg);
-  transition: transform .5s;
+.nav-menu a:hover::before {
+  transform: translateX(100%);
+}
+
+.nav-menu li span {
+  font-family: 'Valorant', sans-serif;
+  position: relative;
+  z-index: 1;
 }
 
 .nav-menu li.active a {
