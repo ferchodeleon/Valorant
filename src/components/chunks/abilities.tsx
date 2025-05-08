@@ -7,7 +7,6 @@ const Abilities = (ability: AbilitiesModel) => {
       {ability.displayIcon && (
         <div className="abilities-info" key={ability.displayName}>
           <img src={ability.displayIcon} />
-          <p className="abilities-name">{ability.displayName}</p>
           <p className="abilities-slot">{ability.slot}</p>
         </div>
       )}

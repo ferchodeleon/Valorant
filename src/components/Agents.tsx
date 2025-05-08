@@ -61,7 +61,7 @@ const Agents = () => {
   return (
     <section className="m-auto agents-section">
       <input
-        className="agents-search-input w-1/4 border-none rounded-lg"
+        className="agents-search-input w-3/4 md:w-1/2 lg:w-1/4 border-none rounded-lg"
         type="text"
         placeholder="Buscar agente"
         value={searchTerm}
@@ -81,19 +81,21 @@ const Agents = () => {
                 alt={agent.displayName}
               />
               <h3 className="agent-card-title">{agent.displayName}</h3>
-              <p className="agent-card-description">{agent.description}</p>
               <div className="agent-role">
-                <p className="agent-role-name">{agent.role!.displayName}</p>
                 <img
                   className="agent-role-img"
                   src={agent.role!.displayIcon}
                   alt={agent.role!.displayName}
                 />
+                <p className="agent-role-name">{agent.role!.displayName}</p>
               </div>
               <div className="agent-abilities-container">
-                {agent.abilities.map((ability) => (
-                  <Abilities key={ability.slot} {...ability} />
-                ))}
+                <p>Habilidades</p>
+                <div className="agent-abilities-container-abilities">
+                  {agent.abilities.map((ability) => (
+                    <Abilities key={ability.slot} {...ability} />
+                  ))}
+                </div>
               </div>
             </div>
           ))}
