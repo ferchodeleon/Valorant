@@ -75,7 +75,11 @@ const Agents = () => {
         <div className="agents-container">
           {filteredAgents.map((agent) => (
             <div className="agent-card" key={agent.uuid}>
-              <img src={agent.displayIcon} alt={agent.displayName} />
+              <img
+                className="agent-card-img-agent"
+                src={agent.displayIcon}
+                alt={agent.displayName}
+              />
               <h3 className="agent-card-title">{agent.displayName}</h3>
               <p className="agent-card-description">{agent.description}</p>
               <div className="agent-role">
