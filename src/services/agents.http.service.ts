@@ -8,4 +8,9 @@ export class AgentHttpService {
     const data = await this.base.getAll();
     return data;
   }
+
+  async getAgentById(agentId: string): Promise<AgentModels> {
+    const data = await this.base.getById(agentId);
+    return data;
+  }
 }

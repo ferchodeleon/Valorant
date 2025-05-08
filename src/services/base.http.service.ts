@@ -27,6 +27,19 @@ class BaseHttpService<T> {
     );
     return data.data;
   }
+
+  async getById(id: string) {
+    const { data } = await axios.get<{ data: T }>(
+      `${this.url}${this.feature}/${id}`,
+      {
+        params: {
+          language: this.getLanguageCode(),
+          isPlayableCharacter: this.character,
+        },
+      }
+    );
+    return data.data;
+  }
 }
 
 export default BaseHttpService;
