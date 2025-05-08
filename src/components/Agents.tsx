@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { AgentModels } from "../models/agents/Agents.model";
 import { AgentHttpService } from "../services/agents.http.service";
+import { Link } from "react-router-dom";
 
 import "../styles/Agents.css";
 import Abilities from "./chunks/abilities";
@@ -74,7 +75,11 @@ const Agents = () => {
       ) : (
         <div className="agents-container">
           {filteredAgents.map((agent) => (
-            <div className="agent-card" key={agent.uuid}>
+            <Link
+              to={`/agents/${agent.uuid}`}
+              className="agent-card"
+              key={agent.uuid}
+            >
               <img
                 className="agent-card-img-agent"
                 src={agent.displayIcon}
@@ -97,7 +102,7 @@ const Agents = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       )}
