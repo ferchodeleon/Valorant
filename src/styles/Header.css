@@ -107,6 +107,12 @@ header {
   z-index: 1000;
 }
 
+@media (max-width: 930px) {
+  .nav-menu {
+    width: 50dvw;
+  }
+}
+
 @media (max-width: 768px) {
   .header-logo img {
     max-width: 10rem;
