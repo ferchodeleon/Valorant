@@ -66,6 +66,10 @@
   color: #fff;
 }
 
+.agent-card-img-agent {
+  mask-image: linear-gradient(black 70%, transparent);
+}
+
 .agent-role {
   color: #000;
 }
