@@ -39,7 +39,7 @@ header {
   padding: .4rem 2rem;
   background-color: var(--Valorant-red);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 85%);
-  background: linear-gradient(135deg, #000 15%, var(--Valorant-red) 15%);
+  background: linear-gradient(140deg, #000 10%, var(--Valorant-red) 15%);
   border-radius: 10px;
 }
 
@@ -56,6 +56,7 @@ header {
   width: 130%;
   height: 100%;
   background-color: var(--Valorant-black);
+  border: 1px solid var(--Valorant-red);
   transform: translateX(-100%) skew(-15deg);
   transition: transform .4s ease;
 }
