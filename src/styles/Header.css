@@ -1,50 +1,80 @@
 header {
   display: flex;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-between;
   width: 100%;
+  padding: 1rem 2rem;
+  position: relative;
 }
 
 .header-logo img {
   max-width: 15rem;
 }
 
-.header-menu, ol {
+.hamburger-menu {
   display: flex;
-  justify-content: space-around;
-  align-items: center;
-  width: 80%;
-  padding: 1rem 0;
-}
-
-.header-menu ol li {
-  position: relative;
-  overflow: hidden;
-  list-style: none;
-  margin: 0 1rem;
-  a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 1.5rem;
-    font-family: 'Valorant', sans-serif;
-  }
-}
-
-.header-menu-a {
-  display: block;
-  position: relative;
-  overflow: hidden;
-  color: #fff;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 30px;
+  height: 20px;
   cursor: pointer;
-  padding: .4rem 2rem;
+  z-index: 1000;
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background-color: var(--Valorant-red);
+  transition: all 0.3s ease;
+}
+
+.hamburger-line.open:first-child {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.hamburger-line.open:last-child {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
+.nav-menu {
+  position: fixed;
+  top: 0;
+  right: -100%;
+  width: 20dvw;
+  height: 100vh;
+  background-color: var(--Valorant-black);
+  padding: 80px 20px 20px;
+  transition: right 0.3s ease;
+  z-index: 999;
+}
+
+.nav-menu.active {
+  right: 0;
+}
+
+.nav-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-menu li {
+  margin: 20px 0;
+}
+
+.nav-menu a {
+  color: #fff;
+  text-decoration: none;
+  font-size: 1.5rem;
+  font-family: 'Valorant', sans-serif;
+  display: block;
+  padding: 10px 20px;
+  position: relative;
+  overflow: hidden;
   background-color: var(--Valorant-red);
   clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%, 0 85%);
   background: linear-gradient(140deg, #000 10%, var(--Valorant-red) 15%);
   border-radius: 10px;
-}
-
-.header-menu-a.active {
-  text-decoration: underline;
 }
 
 .header-menu-a::before {
@@ -66,8 +96,17 @@ header {
   transition: transform .5s;
 }
 
-.header-menu-a span {
-  font-family: 'Valorant', sans-serif;
-  position: relative;
-  z-index: 1;
+.nav-menu li.active a {
+  text-decoration: underline;
+}
+
+.language-buttons {
+  display: flex;
+  z-index: 1000;
+}
+
+@media (max-width: 768px) {
+  .header-logo img {
+    max-width: 10rem;
+  }
 }

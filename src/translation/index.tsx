@@ -7,23 +7,25 @@ const resources = {
   en: {
     translation: {
       // English translations
-      welcome: "Welcome",
+      welcome: "Welcome to Valorant",
       language: "Language",
       agents: "Agents",
       maps: "Maps",
       ranks: "Ranks",
-      // Add more translations as needed
+      descriptionHome:
+        "A pleasure to have you here, here, you will have information about Valorant ☝️",
     },
   },
   es: {
     translation: {
       // Spanish translations
-      welcome: "Bienvenido",
+      welcome: "Bienvenido a Valorant",
       language: "Idioma",
       agents: "Agentes",
       maps: "Mapas",
       ranks: "Rangos",
-      // Add more translations as needed
+      descriptionHome:
+        "Un gusto tenerte por aquí, aquí, tendrás información de Valorant ☝️",
     },
   },
 };
