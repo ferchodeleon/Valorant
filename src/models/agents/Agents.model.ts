@@ -1,11 +1,15 @@
 import { BaseModel } from "../dtos/Base.model";
 import Abilities from "./Abilities.model";
-import { Roles } from "./Roles.model";
+import { Role } from "./Role.model";
 
 export interface AgentModels extends BaseModel {
+  uuid: string;
+  displayName: string;
+  description: string;
+  fullPortrait: string;
+  background: string;
   displayIcon: string;
   portraitAgent: string;
-  background: string;
-  role?: Roles;
+  role?: Role;
   abilities: Abilities[];
 }

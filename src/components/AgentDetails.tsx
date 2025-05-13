@@ -1,8 +1,9 @@
 import { useEffect, useState } from "react";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 import { AgentHttpService } from "../services/agents.http.service";
 import { AgentModels } from "../models/agents/Agents.model";
+import ArrowBack from "../assets/Images/arrow-back.png";
 
 import "../styles/AgentDetail.css";
 
@@ -25,12 +26,51 @@ const AgentDetails = () => {
   }, []);
 
   return (
-    <section
-      style={{ backgroundImage: `url(${agent?.background})` }}
-      className="agent-details-container"
-    >
-      <div className="agent-details-container__image">
-        {/* <img src={agent?.background} alt={agent?.displayName} /> */}
+    <section className="agent-details-container">
+      <div className="agent-details__back-button">
+        <Link to="/agents">
+          <img src={ArrowBack} alt="arrow back" />
+        </Link>
+      </div>
+      <div className="agent-details__image-section">
+        <img
+          className="agent-details__image-agent"
+          src={agent?.fullPortrait}
+          alt={agent?.displayName}
+        />
+      </div>
+
+      <div className="agent-details__info-section">
+        <h2>{agent?.displayName}</h2>
+        <p className="agent-details__info-section__description">
+          {agent?.description}
+        </p>
+        <div className="agent-details__role-section">
+          <div className="agent-details__role-section__image">
+            <img
+              className="agent-details__role-section__image_icon"
+              src={agent?.role?.displayIcon}
+              alt={agent?.role?.displayName}
+            />
+            <p className="agent-details__role-section__image_title">
+              {agent?.role?.displayName}
+            </p>
+          </div>
+          <div className="agent-details__role-section__info">
+            <p>{agent?.role?.description}</p>
+          </div>
+        </div>
+        {agent?.abilities.map((ability) => (
+          <div className="agent-details__abilities-section">
+            <div className="agent-details__abilities-section__title">
+              <img src={ability.displayIcon} alt={ability.displayName} />
+              <p>{ability.displayName}</p>
+            </div>
+            <div className="agent-details__abilities-section__description">
+              <p>{ability.description}</p>
+            </div>
+          </div>
+        ))}
       </div>
     </section>
   );

@@ -1,8 +1,8 @@
 interface Abilities {
+  slot: string;
+  displayName: string;
   description: string;
   displayIcon: string;
-  displayName: string;
-  slot: string;
 }
 
 export default Abilities;
