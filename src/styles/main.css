@@ -34,3 +34,16 @@
 .body {
   background-color: var(--Valorant-third);
 }
+
+body::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+body::-webkit-scrollbar-track {
+  background: var(--Valorant-third);
+}
+
+body::-webkit-scrollbar-thumb {
+  background: var(--Valorant-red);
+  border-radius: 1rem;
+}

@@ -32,6 +32,7 @@ const AgentDetails = () => {
           <img src={ArrowBack} alt="arrow back" />
         </Link>
       </div>
+
       <div className="agent-details__image-section">
         <img
           className="agent-details__image-agent"
@@ -41,6 +42,11 @@ const AgentDetails = () => {
       </div>
 
       <div className="agent-details__info-section">
+        <img
+          className="agent-details__info-section__background"
+          src={agent?.background}
+          alt={agent?.role?.displayName}
+        />
         <h2>{agent?.displayName}</h2>
         <p className="agent-details__info-section__description">
           {agent?.description}
@@ -60,12 +66,15 @@ const AgentDetails = () => {
             <p>{agent?.role?.description}</p>
           </div>
         </div>
+      </div>
+
+      <div className="agent-details__abilities-section_container">
         {agent?.abilities.map((ability) => (
           <div className="agent-details__abilities-section">
-            <div className="agent-details__abilities-section__title">
-              <img src={ability.displayIcon} alt={ability.displayName} />
-              <p>{ability.displayName}</p>
-            </div>
+            {/* <div className="agent-details__abilities-section__title"> */}
+            <img src={ability.displayIcon} alt={ability.displayName} />
+            <p>{ability.displayName}</p>
+            {/* </div> */}
             <div className="agent-details__abilities-section__description">
               <p>{ability.description}</p>
             </div>
