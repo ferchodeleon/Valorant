@@ -1,4 +1,5 @@
 interface Abilities {
+  uuid: string;
   slot: string;
   displayName: string;
   description: string;

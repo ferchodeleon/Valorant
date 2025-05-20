@@ -33,7 +33,10 @@ const AgentDetails = () => {
         </Link>
       </div>
 
-      <div className="agent-details__image-section">
+      <div
+        style={{ backgroundImage: `url(${agent?.background})` }}
+        className="agent-details__image-section"
+      >
         <img
           className="agent-details__image-agent"
           src={agent?.fullPortrait}
@@ -42,11 +45,6 @@ const AgentDetails = () => {
       </div>
 
       <div className="agent-details__info-section">
-        <img
-          className="agent-details__info-section__background"
-          src={agent?.background}
-          alt={agent?.role?.displayName}
-        />
         <h2>{agent?.displayName}</h2>
         <p className="agent-details__info-section__description">
           {agent?.description}
@@ -72,7 +70,14 @@ const AgentDetails = () => {
         {agent?.abilities.map((ability) => (
           <div className="agent-details__abilities-section">
             {/* <div className="agent-details__abilities-section__title"> */}
-            <img src={ability.displayIcon} alt={ability.displayName} />
+            <img
+              src={
+                ability.displayIcon != null
+                  ? ability.displayIcon
+                  : "https://i.scdn.co/image/ab67616100005174f777c8d6f705fa1e32f75b86"
+              }
+              alt={ability.displayName}
+            />
             <p>{ability.displayName}</p>
             {/* </div> */}
             <div className="agent-details__abilities-section__description">
