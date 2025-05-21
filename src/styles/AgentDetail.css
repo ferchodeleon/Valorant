@@ -57,7 +57,7 @@
 }
 
 .agent-details__info-section__description {
-  font-size: 1.1vw;
+  font-size: 1.1rem;
   font-weight: 400;
   text-align: justify;
   color: #fff;
@@ -81,7 +81,7 @@
 }
 
 .agent-details__role-section__image_title {
-  font-size: 1.8vw;
+  font-size: 1.5rem;
   font-weight: 700;
   color: #fff;
 }
@@ -109,7 +109,7 @@
 }
 
 .agent-details__abilities-section > p {
-  font-size: 1.3vw;
+  font-size: 1.4rem;
   margin-top: 1rem;
 }
 
@@ -152,9 +152,7 @@
 
 @media screen and (max-width: 770px) {
   .agent-details-container {
-    grid-template-columns: 1fr;
-    height: auto;
-    overflow: visible;
+    display: block;
   }
 
   .agent-details__image-section {
@@ -177,7 +175,6 @@
   }
 
   .agent-details__info-section__description {
-    font-size: 1rem;
     width: 100%;
   }
 
@@ -185,8 +182,12 @@
     width: 100%;
   }
 
-  .agent-details__role-section__image_title {
-    font-size: 1rem;
+  .agent-details__role-section__image {
+    justify-content: center;
+  }
+
+  .agent-details__abilities-section_container {
+    display: block;
   }
 }
 
