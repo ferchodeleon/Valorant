@@ -3,9 +3,6 @@ import Abilities from "./Abilities.model";
 import { Role } from "./Role.model";
 
 export interface AgentModels extends BaseModel {
-  uuid: string;
-  displayName: string;
-  description: string;
   fullPortrait: string;
   background: string;
   displayIcon: string;

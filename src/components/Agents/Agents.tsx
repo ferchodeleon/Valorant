@@ -1,10 +1,10 @@
 import { useEffect, useState } from "react";
-import { AgentModels } from "../models/agents/Agents.model";
-import { AgentHttpService } from "../services/agents.http.service";
+import { AgentModels } from "../../models/agents/Agents.model";
+import { AgentHttpService } from "../../services/agents.http.service";
 import { Link } from "react-router-dom";
 
-import "../styles/Agents.css";
-import Abilities from "./chunks/abilities";
+import "../../styles/Agents.css";
+import Abilities from "../chunks/abilities";
 
 const getAgents = new AgentHttpService();
 

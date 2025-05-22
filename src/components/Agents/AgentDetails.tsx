@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Link, useParams } from "react-router-dom";
 
-import { AgentHttpService } from "../services/agents.http.service";
-import { AgentModels } from "../models/agents/Agents.model";
-import ArrowBack from "../assets/Images/arrow-back.png";
+import { AgentHttpService } from "../../services/agents.http.service";
+import { AgentModels } from "../../models/agents/Agents.model";
+import ArrowBack from "../../assets/Images/arrow-back.png";
 
-import "../styles/AgentDetail.css";
+import "../../styles/AgentDetail.css";
 
 const AgentDetails = () => {
   const [agent, setAgent] = useState<AgentModels | null>(null);
@@ -16,7 +16,6 @@ const AgentDetails = () => {
   const getAgent = async () => {
     if (agentId != null) {
       const agent = await dataAgent.getAgentById(agentId);
-      console.log(agent);
       setAgent(agent);
     }
   };
@@ -69,7 +68,6 @@ const AgentDetails = () => {
       <div className="agent-details__abilities-section_container">
         {agent?.abilities.map((ability) => (
           <div className="agent-details__abilities-section">
-            {/* <div className="agent-details__abilities-section__title"> */}
             <img
               src={
                 ability.displayIcon != null
@@ -79,7 +77,6 @@ const AgentDetails = () => {
               alt={ability.displayName}
             />
             <p>{ability.displayName}</p>
-            {/* </div> */}
             <div className="agent-details__abilities-section__description">
               <p>{ability.description}</p>
             </div>

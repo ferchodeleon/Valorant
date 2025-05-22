@@ -3,8 +3,9 @@ import { I18nextProvider } from "react-i18next";
 
 import Home from "./components/Home";
 import { Header } from "./components/Header";
-import Agents from "./components/Agents";
-import AgentDetails from "./components/AgentDetails";
+import Agents from "./components/Agents/Agents";
+import AgentDetails from "./components/Agents/AgentDetails";
+import MapsList from "./components/Maps/MapsList";
 import i18n from "./translation";
 
 import "./styles/App.css";
@@ -19,6 +20,7 @@ function App() {
             <Route path="/" element={<Home />} />
             <Route path="/agents" element={<Agents />} />
             <Route path="/agents/:agentId" element={<AgentDetails />} />
+            <Route path="/maps" element={<MapsList />} />
           </Routes>
         </main>
       </Router>
