@@ -93,6 +93,7 @@
 
 .agent-role-img {
   height: 50%;
+  margin-right: .2rem;
 }
 
 .agent-abilities-container {
@@ -101,6 +102,12 @@
   align-items: center;
   margin-top: 1rem;
   width: 100%;
+}
+
+.agent-abilities-container > p {
+  align-self: start;
+  margin-bottom: 1rem;
+  margin-left: 1rem;
 }
 
 .agent-abilities-container-abilities {

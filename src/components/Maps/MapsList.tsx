@@ -7,6 +7,7 @@ import Modal from "../Modal/Modal";
 import MapDetail from "./MapDetail";
 
 import "../../styles/MapsList.css";
+import { t } from "i18next";
 
 const getMaps = new AgentHttpService();
 
@@ -45,16 +46,18 @@ const MapsList = () => {
   }, []);
 
   const filteredMaps = maps.filter((map) => {
-    return map.displayName.toLowerCase().includes(searchMap.toLowerCase());
+    if (map.displayIcon != null) {
+      return map.displayName.toLowerCase().includes(searchMap.toLowerCase());
+    }
   });
 
   return (
     <section className="maps-list__container">
-      <h2 className="maps-list__title">Maps List</h2>
+      <h2 className="maps-list__title">{t("mapsList")}</h2>
       <input
         className="maps-list__search"
         type="text"
-        placeholder="Search maps"
+        placeholder={t("searchMaps")}
         value={searchMap}
         onChange={(e) => setSearchMap(e.target.value)}
       />

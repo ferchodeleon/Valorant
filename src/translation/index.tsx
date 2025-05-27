@@ -14,6 +14,11 @@ const resources = {
       ranks: "Ranks",
       descriptionHome:
         "A pleasure to have you here, here, you will have information about Valorant ☝️",
+      mapsList: "Maps List",
+      searchMaps: "Search Maps",
+      noDescription: "No description",
+      noCoordinates: "No coordinates",
+      interestAreas: "Interest Areas",
     },
   },
   es: {
@@ -26,6 +31,11 @@ const resources = {
       ranks: "Rangos",
       descriptionHome:
         "Un gusto tenerte por aquí, aquí, tendrás información de Valorant ☝️",
+      mapsList: "Lista de mapas",
+      searchMaps: "Buscar mapas",
+      noDescription: "No hay descripción",
+      noCoordinates: "Sin coordenadas",
+      interestAreas: "Zonas de interés",
     },
   },
 };
