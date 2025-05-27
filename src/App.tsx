@@ -9,6 +9,7 @@ import MapsList from "./components/Maps/MapsList";
 import i18n from "./translation";
 
 import "./styles/App.css";
+import { Weapons } from "./components/Weapons";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
             <Route path="/agents" element={<Agents />} />
             <Route path="/agents/:agentId" element={<AgentDetails />} />
             <Route path="/maps" element={<MapsList />} />
+            <Route path="/weapons" element={<Weapons />} />
           </Routes>
         </main>
       </Router>

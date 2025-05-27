@@ -88,6 +88,11 @@ export const Header = () => {
               <span>{t("maps")}</span>
             </Link>
           </li>
+          <li className={location.pathname === "/weapons" ? "active" : ""}>
+            <Link to="/weapons" onClick={() => setIsMenuOpen(false)}>
+              <span>{t("weapons")}</span>
+            </Link>
+          </li>
         </ul>
       </nav>
     </header>

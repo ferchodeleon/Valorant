@@ -19,6 +19,7 @@ const resources = {
       noDescription: "No description",
       noCoordinates: "No coordinates",
       interestAreas: "Interest Areas",
+      weapons: "Weapons",
     },
   },
   es: {
@@ -36,6 +37,7 @@ const resources = {
       noDescription: "No hay descripción",
       noCoordinates: "Sin coordenadas",
       interestAreas: "Zonas de interés",
+      weapons: "Armas",
     },
   },
 };
