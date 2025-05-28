@@ -1,0 +1,11 @@
+.weapon-detail__container > h2 {
+  text-align: center;
+  font-size: 2rem;
+  font-family: "Valorant", sans-serif;
+}
+
+.weapon-detail__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
