@@ -32,4 +32,9 @@ export class AgentHttpService {
     const data = await this.baseWeapons.getAll();
     return data;
   }
+
+  async getWeaponById(weaponId: string): Promise<Weapon> {
+    const data = await this.baseWeapons.getById(weaponId);
+    return data;
+  }
 }
